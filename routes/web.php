@@ -23,7 +23,7 @@ use App\Http\Controllers\AdminController;
 */
 
 
-Route::get("/", 'App\Http\Controllers\HomeController@index');
+Route::get("/", 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::get('Email', function () {
     Mail::to('britneypolanco19@gmail.com')
