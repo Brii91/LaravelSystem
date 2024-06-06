@@ -10,24 +10,18 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Reservation Details</h4>
+                    <h4 class="card-title">Detalle de comentarios</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
                           <tr>
                           
            
-                            <th> Date </th>
-                            <th> Time </th>
-                            <th> Name </th>
-                            <th> Email </th>
-                            <th> Phone</th>
-                        
-                            <th> No of Guests </th>
-              
-                  
-                            
-                            <th> Message </th>
+                            <th> Día </th>
+                            <th> Nombre </th>
+                            <th> Gmail </th>
+                            <th> Teléfono</th>
+                            <th> Mensaje </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -38,7 +32,6 @@
                             <td>
                               <span class="ps-2">{{ $reservation->date }}</span>
                             </td>
-                            <td> {{ $reservation->time }} </td>
                             <td> {{ $reservation->name }} </td>
                             <td>
 
@@ -50,7 +43,6 @@
 
 
                             <td>  {{  $reservation->phone }}</td>
-                            <td> {{ $reservation->no_guest }} </td>
                      
                  
 

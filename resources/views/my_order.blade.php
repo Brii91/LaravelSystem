@@ -9,7 +9,7 @@
     <center>
 
 
-    <h1>My order</h1>
+    <h1>Mi pedido</h1>
 
     <br>
     <br>
@@ -20,11 +20,10 @@
     <thead>
         <tr>
             <th style="width:10%">Date</th>
-            <th style="width:10%">Invoice No.</th>
-            <th style="width:50%">Product</th>
-            <th style="width:20%">Payment Method</th>
-            <th style="text-align:center;width:10%">Price</th>
-            <th style="width:8%">Quantity</th>
+            <th style="width:10%">Factura No.</th>
+            <th style="width:50%">Producto</th>
+            <th style="text-align:center;width:10%">Precio</th>
+            <th style="width:8%">Cantidad</th>
             <th style="width:22%" class="text-center">Subtotal</th>
             
         </tr>
@@ -37,10 +36,9 @@
                 <td>{{$product->purchase_date}}</td>
                 <td>{{$product->invoice_no}}</td>
                 <td>{{$product->name}}</td>
-                <td>{{$product->pay_method}}</td>
-                <td style="text-align:center">৳{{$product->price}}</td>
+                <td style="text-align:center">RD${{$product->price}}</td>
                 <td style="text-align:center">{{$product->quantity}}</td>
-                <td style="text-align:center">৳{{$product->subtotal}}</td>
+                <td style="text-align:center">RD${{$product->subtotal}}</td>
               
             </tr>
         @endforeach
@@ -55,11 +53,10 @@
         Session::put('total',$total_price);
         
         @endphp
-            <td colspan="7" class="text-right"><h3><strong>Total ৳{{ $total_price }}</strong></h3></td>
         </tr>
         <tr>
             <td colspan="7" class="text-right">
-                <a href="{{ url('/menu') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+                <a href="{{ url('/menu') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continuar comprando</a>
               
             </td>
         </tr>

@@ -63,8 +63,8 @@
                             </p>
     </div>
     <div class="card-footer">
-      <small class="text-muted"><a href="{{ asset('/chef/edit/'.$chef->id) }}" class="btn btn-primary">Edit</a>
-      <a href="{{ asset('/chef/delete/'.$chef->id) }}" class="btn btn-danger" style="margin-left:10px;">Delete</a>
+      <small class="text-muted"><a href="{{ asset('/chef/edit/'.$chef->id) }}" class="btn btn-primary">Editar</a>
+      <a href="{{ asset('/chef/delete/'.$chef->id) }}" class="btn btn-danger" style="margin-left:10px;">Eliminar</a>
 
 
 

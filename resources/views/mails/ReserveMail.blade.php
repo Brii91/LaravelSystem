@@ -70,7 +70,7 @@
                         <tr>
                           <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
                             Hello, Philip Brooks.
-                            <br> Thank you for shopping from our store and for your order.
+                            <br> Gracias por comprar en nuestra tienda y por su pedido.
                           </td>
                         </tr>
                       </tbody>
@@ -85,7 +85,7 @@
                         </tr>
                         <tr>
                           <td style="font-size: 21px; color: #ff0000; letter-spacing: -1px; font-family: 'Open Sans', sans-serif; line-height: 1; vertical-align: top; text-align: right;">
-                            Invoice
+                          Factura
                           </td>
                         </tr>
                         <tr>
@@ -97,7 +97,7 @@
                         </tr>
                         <tr>
                           <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: right;">
-                            <small>ORDER</small> #800000025<br />
+                            <small>ORDEN</small> #800000025<br />
                             <small>MARCH 4TH 2016</small>
                           </td>
                         </tr>
@@ -134,13 +134,13 @@
                   <tbody>
                     <tr>
                       <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
-                        Item
+                      Artículo
                       </th>
                       <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="left">
                         <small>SKU</small>
                       </th>
                       <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="center">
-                        Quantity
+                        Cantidad
                       </th>
                       <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="right">
                         Subtotal

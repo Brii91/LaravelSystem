@@ -142,7 +142,7 @@
 </center>
     <center>
 
-    <h4>Product Details</h4>
+    <h4>Detalle de producto</h4>
     <br>
     <br>
 
@@ -165,9 +165,9 @@
             @php $total += $product['price'] * $product['quantity'] @endphp
             <tr>
                 <td>{{$product->name}}</td>
-                <td style="text-align:center">৳{{$product->price}}</td>
+                <td style="text-align:center">RD${{$product->price}}</td>
                 <td style="text-align:center">{{$product->quantity}}</td>
-                <td style="text-align:center">৳{{$product->subtotal}}</td>
+                <td style="text-align:center">RD${{$product->subtotal}}</td>
                 
             </tr>
             
@@ -179,7 +179,7 @@
                 <td>{{$charge->name}}</td>
                 <td style="text-align:center"></td>
                 <td style="text-align:center"></td>
-                <td style="text-align:center">৳{{$charge->price}}</td>
+                <td style="text-align:center">RD${{$charge->price}}</td>
                 
             </tr>
             
@@ -195,7 +195,7 @@
         Session::put('total',$total_price);
         
         @endphp
-            <td colspan="4" class="text-right"><h6><strong>Total ৳{{ $without_discount_price }}</strong></h6></td>
+            <td colspan="4" class="text-right"><h6><strong>Total RD${{ $without_discount_price }}</strong></h6></td>
         </tr>
         <tr>
         @php 
@@ -206,7 +206,7 @@
         Session::put('total',$total_price);
         
         @endphp
-            <td colspan="4" class="text-right"><h6><strong>Discount ৳{{ $discount_price }}</strong></h6></td>
+            <td colspan="4" class="text-right"><h6><strong>Discount RD${{ $discount_price }}</strong></h6></td>
         </tr>
         <tr>
         @php 
@@ -219,11 +219,11 @@
         Session::put('total',$total_price);
         
         @endphp
-            <td colspan="4" class="text-right"><h3><strong>Total (With Discount)৳{{ $total_price }}</h2></strong></h3></td>
+            <td colspan="4" class="text-right"><h3><strong>Total RD${{ $total_price }}</h2></strong></h3></td>
         </tr>
         <tr>
             <td colspan="5" class="text-right">
-                <a href="{{ url('/menu') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>
+                <a href="{{ url('/menu') }}" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continuar comprando</a>
              
             </td>
         </tr>

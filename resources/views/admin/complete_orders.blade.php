@@ -17,15 +17,9 @@
                           <tr>
                           
            
-                            <th> Delivery Date & Time </th>
-                            <th> Invoice No </th>
-                            <th> Customer Name </th>
-                            <th> Customer Phone</th>
-                        
-                            <th> Shippping Address </th>
-              
-                  
-                            <th> Payment Method </th>
+                            <th> Factura No </th>
+                            <th> Nombre del cliente </th>
+                            <th> Número del cliente</th>
                             <th> Action </th>
                           </tr>
                         </thead>
@@ -56,9 +50,6 @@
 
 
                             <td>  {{  $user->phone }}</td>
-                            <td> {{ $order->shipping_address }} </td>
-                     
-                            <td> {{ $order->pay_method }} </td>
 
                             <td>
 

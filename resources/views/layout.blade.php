@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/short.jpg') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/donas.png') }}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Midway Dine - Your Favourite Foods</title>
+    <title>Tasty Donut's - Tu mejor experiencia</title>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css')}}">
@@ -33,39 +34,72 @@
     <body ng-app="">
     
     <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
+      
     <!-- ***** Preloader End ***** -->
     
     
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area" style="z-index:1000">
-        <div class="container">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="{{url('home')}}" class="logo">
-                            <img width="100px" src="{{ asset('assets/images/logo.png')}}">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="/">Home</a></li>
-                            <li class="scroll-to-section"><a href="/#about">About</a></li>
-                           	
-                            <li class="scroll-to-section"><a href="/#menu">Menu</a></li>
-                        
-                            <li class="scroll-to-section"><a href="/trace-my-order">Trace Order</a></li>
+    <style>
+        .badge {
+            padding-left: 9px;
+            padding-right: 9px;
+            padding-top: 10px;
+            -webkit-border-radius: 9px;
+            -moz-border-radius: 9px;
+            border-radius: 9px;
+            height: 16px;
+            text-align: center;
+        }
 
-                            <li class="scroll-to-section"><a href="/my-order">My Order</a></li>
-                          
-                            <li class="scroll-to-section"><a href="/#chefs">Chefs</a></li> 
-                            <li class="scroll-to-section"><a href="/#reservation">Contact Us</a></li>
-                            <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
+        .label-warning[href],
+        .badge-warning[href] {
+            background-color: #c67605;
+        }
+
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-area" style="z-index: 1000">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="{{url('home')}}">
+                    <img width="100px" src="{{ asset('assets/images/LOGO2.png')}}" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#about">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#menu">Menú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#offers">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/my-order">Mis pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#chefs">Equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/#reservation">Contacto</a>
+                        </li>
+                        <li><a href="/cart"><i class="fa fa-shopping-cart"></i></a></li>
 
 
                             <?php
@@ -89,56 +123,29 @@
 
 
                             <span class='badge badge-warning' id='lblCartCount'> {{ $cart_amount }} </span>
-
-                            <style>
-
-
-                                .badge {
-                                padding-left: 9px;
-                                padding-right: 9px;
-                                padding-top:10px;
-                                -webkit-border-radius: 9px;
-                                -moz-border-radius: 9px;
-                                border-radius: 9px;
-                                height:16px;
-                                text-align:center;
-                                }
-
-                                .label-warning[href],
-                                .badge-warning[href] {
-                                background-color: #c67605;
-                                }
-                                #lblCartCount {
-                                    font-size: 12px;
-                                    background: #ff0000;
-                                    color: #fff;
-                                    padding: 0 5px;
-                                    vertical-align: top;
-                                    margin-left: -10px; 
-                                }
-                            </style>
-                            <li>
-                                @if (Route::has('login'))
-                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                    @auth
-                                        <li style="margin-top:-13px;">
-                                            <x-app-layout> </x-app-layout>
-                                        </li>
-                                    @else
-                                      <li>
-                                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                                      </li>
-                                        @if (Route::has('register'))
-                                            <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a> </li>
-                                        @endif
-                                    @endauth
-                                </div>
+                        <li class="nav-item">
+                            @if (Route::has('login'))
+                            <div class="nav-item">
+                                @auth
+                                <li class="nav-item">
+                                    <x-app-layout> </x-app-layout>
+                                </li>
+                                @else
+                                <li class="nav-item">
+                                    <a href="{{ route('login') }}" class="nav-link text-sm text-gray-700 underline">Iniciar sesión</a>
+                                </li>
+                                @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a href="{{ route('register') }}" class="nav-link ml-4 text-sm text-gray-700 underline">Registrarse</a>
+                                </li>
                                 @endif
-                            </li>
-                        </ul>        
-                        
-                        <!-- ***** Menu End ***** -->
-                    </nav>
+                                @endauth
+                            </div>
+                            @endif
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </header>
     <!-- ***** Header Area End ***** -->
@@ -168,8 +175,8 @@
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Midway Dine
-							<br>Since 2022</p>
+                        <p>© Copyright Tasty Donut's
+							<br>2024</p>
                     </div>
                 </div>
             </div>
@@ -182,6 +189,10 @@
     <!-- Bootstrap -->
     <script src="{{ asset('assets/js/popper.js')}}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Plugins -->
     <script src="{{ asset('assets/js/owl-carousel.js')}}"></script>

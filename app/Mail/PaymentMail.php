@@ -31,7 +31,7 @@ class PaymentMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from RMS Admin')
+        return $this->subject('Mail de Admin')
         ->view('mails.PaymentMail');
     }
 }

@@ -930,7 +930,7 @@ class AdminController extends Controller
 
         $details = [
             'title' => 'Mail from RMS Admin',
-            'body' => 'Congrats ! You are selected as a '.$usertype.' ( Salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel. Your Email ID - '.$req->email. ' & Password - '.$req->password,
+            'body' => 'Congrats ! You are selected as a '.$usertype.' ( Salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel. Your Email ID - '.$req->email. ' & Password - '.$req->password,
         ];
 
 
@@ -1099,7 +1099,7 @@ class AdminController extends Controller
                 
                 $details = [
                     'title' => 'Mail from RMS Admin',
-                    'body' => 'Congrats ! You are promoted for a '.$usertype.' position. ( Now, Your salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel.',
+                    'body' => 'Congrats ! You are promoted for a '.$usertype.' position. ( Now, Your salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel.',
                 ];
     
     
@@ -1110,7 +1110,7 @@ class AdminController extends Controller
     
                 $details = [
                     'title' => 'Mail from RMS Admin',
-                    'body' => 'Sorry ! You are depromoted for a '.$usertype.' position. ( Now, Your salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel.',
+                    'body' => 'Sorry ! You are depromoted for a '.$usertype.' position. ( Now, Your salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel.',
                 ];
     
     
@@ -1234,7 +1234,7 @@ class AdminController extends Controller
 
         $details = [
             'title' => 'Mail from RMS Admin',
-            'body' => 'Congrats ! You are selected as a Delivery Boy position ( Salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel. Your Email ID - '.$req->email. ' & Password - '.$req->password,
+            'body' => 'Congrats ! You are selected as a Delivery Boy position ( Salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel. Your Email ID - '.$req->email. ' & Password - '.$req->password,
         ];
 
 
@@ -1366,7 +1366,7 @@ class AdminController extends Controller
                 
                 $details = [
                     'title' => 'Mail from RMS Admin',
-                    'body' => 'Congrats ! You are promoted for a  Delivery Boy position. ( Now, Your salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel.',
+                    'body' => 'Congrats ! You are promoted for a  Delivery Boy position. ( Now, Your salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel.',
                 ];
     
     
@@ -1377,7 +1377,7 @@ class AdminController extends Controller
     
                 $details = [
                     'title' => 'Mail from RMS Admin',
-                    'body' => 'Sorry ! You are depromoted for a  Delivery Boy position. ( Now, Your salary - '.$req->salary.'Tk ) of RMS by RMS Admin Panel.',
+                    'body' => 'Sorry ! You are depromoted for a  Delivery Boy position. ( Now, Your salary - '.$req->salary.'$ ) of RMS by RMS Admin Panel.',
                 ];
     
     

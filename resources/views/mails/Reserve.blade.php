@@ -73,7 +73,7 @@
   		        <strong>Phone:</strong>(+880) 1824072334
   	    	</div>
   	    	<div class="span3">
-  		        <strong>Email:</strong> <a href="sajeebchakraborty.cse2000@gmail.com">sajeebchakraborty.cse2000@gmail.com</a>
+  		        <strong>Email:</strong> <a href="britneypolanco19@gmail.com">britneypolanco@gmail.com</a>
   	    	</div>
   	    
   		</div>

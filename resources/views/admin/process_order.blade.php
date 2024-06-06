@@ -40,12 +40,10 @@
                           <tr>
                           
            
-                            <th> Date </th>
-                            <th> Invoice No </th>
-                            <th> Customer Name </th>
-                            <th> Customer Phone</th>
-                        
-                            <th> Shippping Address </th>
+                            <th> Dia </th>
+                            <th> Factura No </th>
+                            <th> Nombre del cliente </th>
+                            <th> Número del cliente</th>
               
                   
                            
@@ -79,14 +77,13 @@
 
 
                             <td>  {{  $user->phone }}</td>
-                            <td> {{ $order->shipping_address }} </td>
                      
 
 
                             <td>
 
                             <a href="{{ asset('/invoice/details/'.$order->invoice_no) }}" class="badge badge-outline-primary">Details</a>
-                            <a href="{{ asset('/invoice/complete/'.$order->invoice_no) }}" class="badge badge-outline-success" style="margin-left:10px;">Complete Delivery</a>
+                            <a href="{{ asset('/invoice/complete/'.$order->invoice_no) }}" class="badge badge-outline-success" style="margin-left:10px;">Completado</a>
                           </td>
                           </tr>
 

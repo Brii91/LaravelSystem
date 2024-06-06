@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+
+
 use DB;
 use PDF;
 use Hash;
@@ -307,12 +309,24 @@ class HomeController extends Controller
         */
 
         $pdf = PDF::loadView('mails.Reserve', $data);
+
+        $user = Auth::user();
+if ($user) {
+    $message->to($user->email);
+}
+
   
-        \Mail::send('mails.Reserve', $data, function($message)use($data, $pdf) {
-            $message->to(Auth::user()->email,Auth::user()->email)
-                    ->subject($data["title"])
-                    ->attachData($pdf->output(), "Reservation Copy.pdf");
-        });
+if (Auth::check()) {
+    \Mail::send('mails.Reserve', $data, function($message) use ($data, $pdf) {
+        $user = Auth::user();
+        $message->to($user->email, $user->email)
+                ->subject($data["title"])
+                ->attachData($pdf->output(), "Reservation Copy.pdf");
+    });
+} else {
+    // Lógica de manejo si no hay usuario autenticado
+}
+
        
 
 

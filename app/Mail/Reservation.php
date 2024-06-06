@@ -28,7 +28,7 @@ class Reservation extends Mailable
      */
     public function build()
     {
-        return $this->from('rahathossenmanik@gmail.com', 'RMS Reservation')
+        return $this->from('britneypolanco19@gmail.com', 'RMS Reservation')
                 ->view('emails.orders.shipped')
                 ->view('emails.shipped')->text('emails.shipped_plain');
     }

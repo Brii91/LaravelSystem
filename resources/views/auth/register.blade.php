@@ -1,10 +1,10 @@
-<title>MidwayCafe</title>
+<title>Tasty Donut's</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/short.jpg') }}">
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
             <!--<x-jet-authentication-card-logo /> -->
-            <img width="100px" src="{{ asset('assets/images/logo.png')}}">
+            <img width="100px" src="{{ asset('assets/images/LOGO2.png')}}">
         </x-slot>
         @if(Session::has('wrong'))
         <br>
@@ -28,7 +28,7 @@
             @csrf
 
             <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-label for="name" value="{{ __('Nombre') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
@@ -38,17 +38,17 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Phone') }}" />
+                <x-jet-label for="email" value="{{ __('Teléfono') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="number" name="phone" :value="old('phone')" required />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
+                <x-jet-label for="password" value="{{ __('Clave') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                <x-jet-label for="password_confirmation" value="{{ __('Confirmar clave') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
 
@@ -71,7 +71,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Ya está registrado?') }}
                 </a>
 
                 <x-jet-button class="ml-4">

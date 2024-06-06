@@ -59,16 +59,16 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Product Details</h4>
+                    <h4 class="card-title">Detalle de producto</h4>
                     <div class="table-responsive">
                       <table class="table">
                         <thead>
                           <tr>
                           
            
-                            <th> Product Name </th>
-                            <th> Price </th>
-                            <th> Quantity </th>
+                            <th> Nombre del producto </th>
+                            <th> Precio </th>
+                            <th> Cantidad </th>
                             <th> Subtotal </th>
                           
                           </tr>
@@ -118,25 +118,17 @@
                             <td></td>
                             <td></td>
                             <td>Total </td>
-                            <td class="">  ৳{{  $wihout_discount_price }}</td>                   
+                            <td class="">  RD${{  $wihout_discount_price }}</td>                   
                     
                     
                         </tr>
 
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>Discount </td>
-                            <td class="">  ৳{{  $discount_price }}</td>                   
-                    
-                    
-                        </tr>
 
                         <tr>
                             <td></td>
                             <td></td>
-                            <td><h3>Total (With Discount)</h3> </td>
-                            <td class=""><h3>  ৳{{  $total_price }} </h3></td>                   
+                            <td><h3>Total</h3> </td>
+                            <td class=""><h3>  RD${{  $total_price }} </h3></td>                   
                     
                     
                         </tr>

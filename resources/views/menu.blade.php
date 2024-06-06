@@ -19,7 +19,7 @@
                 <td>
                     <img src="{{asset('assets/images/'.$product->image)}}" height=150px width=180px></td>
                     <td><h2>{{$product->name}}</h2>
-                    <h4>৳{{$product->price}}</h4>
+                    <h4>RD${{$product->price}}</h4>
                     <p>{{$product->description}}</p>
                     <form method="post" action="{{route('cart.store', $product)}}">
                         @csrf
@@ -81,9 +81,9 @@
                        
                         @if($product->available=="Stock")
                         <input type="number" name="number" style="width:50px;" id="myNumber" value="1">
-                        <button class="btn btn-success">Add to Cart</button>
+                        <button class="btn btn-success">Agregar al carrito</button>
                         @endif
-                        @if($product->available!="Stock") <p class="btn btn-danger">Out of Stock</p>
+                        @if($product->available!="Stock") <p class="btn btn-danger">Agotado</p>
                         @endif
                     </form>
                 </td>

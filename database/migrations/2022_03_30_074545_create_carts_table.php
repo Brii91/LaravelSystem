@@ -13,13 +13,22 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
+        Schema::table('products', function (Blueprint $table) {
+            // Añade la columna 'category' si no existe
+            if (!Schema::hasColumn('products', 'category')) {
+                $table->string('category')->after('name')->nullable();
+            }
+        });
+        
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->decimal("product_id", 6, 0);
-            $table->string("name", 255);
-            $table->decimal("price", 6, 2);
-            $table->decimal("quantity", 6, 0);
-            $table->decimal("subtotal", 6, 2);
+            $table->decimal('product_id', 6, 0);
+            $table->string('name');
+            $table->decimal('price', 6, 2);
+            $table->decimal('quantity', 6, 0);
+            $table->date('date');
+            $table->time('time');
+            $table->decimal('subtotal', 6, 2);
             $table->timestamps();
         });
     }
@@ -32,5 +41,10 @@ class CreateCartsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('carts');
+
+        Schema::table('products', function (Blueprint $table) {
+            // Elimina la columna 'category'
+            $table->dropColumn('category');
+        });
     }
 }

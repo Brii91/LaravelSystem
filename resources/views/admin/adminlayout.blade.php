@@ -117,7 +117,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-food"></i>
               </span>
-              <span class="menu-title">Food Menu</span>
+              <span class="menu-title">Menú</span>
             </a>
           </li>
           
@@ -127,7 +127,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-food"></i>
               </span>
-              <span class="menu-title">Chefs</span>
+              <span class="menu-title">Equipo</span>
             </a>
           </li>
           @endif
@@ -137,16 +137,13 @@
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">Orders</span>
+              <span class="menu-title">Pedidos</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/admin/orders-incomplete">Pending Orders</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/orders/process">Processing Order</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/orders-complete">Complete Orders</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/orders/cancel">Cancelled Order</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/order/location">Update Location</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/orders-incomplete">Pedidos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/orders/cancel">Pedidos cancelados</a></li>
 
               </ul>
             </div>
@@ -175,7 +172,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
-              <span class="menu-title">Reservation</span>
+              <span class="menu-title">Mensajes</span>
             </a>
           </li>
           @if(Auth::user()->usertype == 1)
@@ -184,7 +181,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-settings"></i>
               </span>
-              <span class="menu-title">Customize Template</span>
+              <span class="menu-title">Editar página</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -197,8 +194,8 @@
             </a>
             <div class="collapse" id="ui-basic2">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/admin/add/banner">Add Banners</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/admin/banner/all">All Banners</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/add/banner">Agregar Banners</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/admin/banner/all">Todos Banners</a></li>
               </ul>
             </div>
           </li>
@@ -219,37 +216,20 @@
               <span class="menu-icon">
                 <i class="mdi mdi-account-plus"></i>
               </span>
-              <span class="menu-title">Customer</span>
+              <span class="menu-title">Clientes</span>
             </a>
           </li>
 
           @if(Auth::user()->usertype == 1)
 
 
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="/delivery-boy">
-              <span class="menu-icon">
-                <i class="mdi mdi-account-plus"></i>
-              </span>
-              <span class="menu-title">Delivery Boy</span>
-            </a>
-          </li>
 
           @endif
           
 
           @if(Auth::user()->usertype != 2)
 
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="/admin/coupon">
-              <span class="menu-icon">
-                <i class="mdi mdi-account-card-details"></i>
-              </span>
-              <span class="menu-title">Coupon</span>
-            </a>
-          </li>
-
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="/admin/charge">
               <span class="menu-icon">
                 <i class="mdi mdi-bank"></i>
@@ -258,7 +238,7 @@
             </a>
           </li>
 
-          @endif
+          @endif-->
 
      
          
@@ -393,9 +373,9 @@
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © RMS  2022</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Tasty Donut's 2024</span>
          
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a href="/" target="_blank">Go to Client Section</a></span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a href="/" target="_blank">Ir a la sección de clientes</a></span>
             </div>
           </footer>
           <!-- partial -->

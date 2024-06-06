@@ -20,34 +20,24 @@
        
 		    	</address>
     		</div>
-           <center> <h1>MidwayCafe</h1> </center>
+           <center> <h1>Tasty Donut's</h1> </center>
             <img src="data:image/png;base64, {!! $qrcode !!}" style="margin-left:570px;">
     		<div class="span4 well">
     			<table class="invoice-head" style="margin-left:20px;font-size:18px;">
     				<tbody>
                  
                     <tr style="text-align:left">
-    						<td class="pull-right"><strong>Invoice No  </strong></td>
+    						<td class="pull-right"><strong>Factura No  </strong></td>
     						<td style="text-align:left">: {{ $invoice_no }}</td>
     					</tr>
   
     					<tr style="text-align=left">
-    						<td class="pull-right" style="text-align:left"><strong>Customer Name  </strong></td>
+    						<td class="pull-right" style="text-align:left"><strong>Nombre del cliente </strong></td>
     						<td style="text-align:left">: {{  Auth::user()->name  }}</td>
     					</tr>
                         <tr style="text-align=left">
     						<td class="pull-right" style="text-align:left"><strong>Email  </strong></td>
     						<td style="text-align:left">: {{  Auth::user()->email  }}</td>
-    					</tr>
-
-                        <tr style="text-align=left">
-    						<td class="pull-right" style="text-align:left"><strong>Status  </strong></td>
-    						<td style="text-align:left">: Paid</td>
-    					</tr>
-
-                        <tr style="text-align=left">
-    						<td class="pull-right" style="text-align:left"><strong>Payment Method  </strong></td>
-    						<td style="text-align:left">: Online Payment</td>
     					</tr>
     					
     					<tr style="text-align=left">
@@ -65,7 +55,7 @@
         <hr>
     	<div class="row">
     		<div class="span8">
-    			<h2 style="margin-left:20px;">Product Details</h2>
+    			<h2 style="margin-left:20px;">Detalle del producto</h2>
     		</div>
     	</div>
     	<div class="row">
@@ -73,9 +63,9 @@
 		  		<table class="table table-bordered" id="customers" style="border:2px solid;margin-left:20px;margin-right:20px !important;width:95%!important;">
 					<thead>
 						<tr  style="border:2px solid;text-align:center;">
-                          <th style="text-align:center;">Product</th>
-							<th style="margin-left:20px;text-align:center;">Price</th>
-                          <th style="margin-left:20px;text-align:center;">Quantity</th>
+                          <th style="text-align:center;">Producto</th>
+							<th style="margin-left:20px;text-align:center;">Precio</th>
+                          <th style="margin-left:20px;text-align:center;">Cantidad</th>
 							<th style="margin-left:20px;text-align:center;">Subtotal</th>
 						</tr>
 					</thead>
@@ -85,7 +75,7 @@
 						<td style="margin-left:20px;">{{ $product->name }}</td>
 						<td style="margin-left:20px;">{{ $product->price }}</td>
 						<td style="margin-left:20px;">{{ $product->quantity }}</td>
-                      <td style="margin-left:20px;">{{ $product->subtotal }} Tk</td>
+                      <td style="margin-left:20px;">{{ $product->subtotal }} RD$</td>
 						</tr>
                     @endforeach
                     @foreach($extra_charge as $charge)
@@ -93,7 +83,7 @@
 						<td style="margin-left:20px;">{{ $charge->name }}</td>
 						<td style="margin-left:20px;"></td>
 						<td style="margin-left:20px;"></td>
-                      <td style="margin-left:20px;">{{ $charge->price }} Tk</td>
+                      <td style="margin-left:20px;">{{ $charge->price }} RD$</td>
 						</tr>
                     @endforeach
 
@@ -102,21 +92,15 @@
 <tr>
 							<td colspan="2">&nbsp;</td>
 							<td><strong>Total</strong></td>
-							<td><strong>{{  $without_discount_price }} Tk</strong></td>
+							<td><strong>{{  $without_discount_price }} RD$</strong></td>
 						</tr>
             <tr><td colspan="4"></td></tr>
-<tr>
-							<td colspan="2">&nbsp;</td>
-							<td><strong>Discount</strong></td>
-							<td><strong>{{  $discount_price }} Tk</strong></td>
-						</tr>
-            <tr><td colspan="4"></td></tr>
-<tr>
+            <tr>
             <tr><td colspan="4"></td></tr>
 <tr>
 							<td colspan="2">&nbsp;</td>
 							<td><strong>Total</strong></td>
-							<td><strong>{{  $total }} Tk</strong></td>
+							<td><strong>{{  $total }} RD$</strong></td>
 						</tr>
 					</tbody>
 				</table>
@@ -130,14 +114,14 @@
 
   		<div class="row" style="margin-left:20px;">
           <div class="span3" style="font-size:16px;">
-  		        <strong>RMS Admin</strong>
+  		        <strong> Admin</strong>
   	    	</div>
             <br>
   	    	<div class="span3">
   		        <strong>Phone:</strong>(+880) 1824072334
   	    	</div>
   	    	<div class="span3">
-  		        <strong>Email:</strong> <a href="sajeebchakraborty.cse2000@gmail.com">sajeebchakraborty.cse2000@gmail.com</a>
+  		        <strong>Email:</strong> <a href="britneypolanco19@gmail.com">britneypolanco19@gmail.com</a>
   	    	</div>
   	    
   		</div>

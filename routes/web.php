@@ -25,6 +25,13 @@ use App\Http\Controllers\AdminController;
 
 Route::get("/", 'App\Http\Controllers\HomeController@index');
 
+Route::get('Email', function () {
+    Mail::to('britneypolanco19@gmail.com')
+    ->send(new App\Mail\Notification);
+
+    return "Mensaje enviado";
+})->name('Notification');
+
 Route::post("/register/confirm",'App\Http\Controllers\HomeController@register')->name('register/confirm');
 Route::get("/redirects",'App\Http\Controllers\HomeController@redirects');
 

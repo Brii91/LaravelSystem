@@ -29,7 +29,7 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('rahathossenmanik@gmail.com', 'RMS Order')
+        return $this->from('britneypolanco19@gmail.com', 'RMS Order')
                 ->view('emails.shipped')->text('emails.shipped_plain');
     }
 }

@@ -8,7 +8,7 @@
 <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Edit Menu</h4>
+                    <h4 class="card-title">Editar Menú</h4>
                     <br>
                     @if(Session::has('wrong'))
               
@@ -32,31 +32,31 @@
                        @csrf
 
                       <div class="form-group">
-                        <label for="exampleInputName1">Name</label>
+                        <label for="exampleInputName1">Nombre</label>
                         <input type="text" name="name" value="{{ $product->name }}" class="form-control" id="exampleInputName1">
                       </div>
                       <div class="form-group">
-                        <label for="exampleTextarea1">Description</label>
+                        <label for="exampleTextarea1">Descripción</label>
                         <textarea class="form-control" value="{{ $product->description }}" name="description" id="exampleTextarea1" rows="5">{{ $product->description }}</textarea>
                       </div>
                     
                       <div class="form-group">
-                        <label for="exampleInputPassword4">Price</label>
+                        <label for="exampleInputPassword4">Precio</label>
                         <input type="number" name="price" value="{{ $product->price }}" class="form-control" id="exampleInputPassword4">
                       </div>
                       <div class="form-group">
-                        <label for="exampleSelectGender">Catagory</label>
+                        <label for="exampleSelectGender">Categoria</label>
                         <select class="form-control" name="catagory" id="exampleSelectGender">
                           <option value="regular" @php if($product->catagory=="regular"){ echo"selected"; }   @endphp>Regular</option>
-                          <option value="special" @php if($product->catagory=="special"){ echo"selected"; }   @endphp>Special</option>
+                          <option value="special" @php if($product->catagory=="special"){ echo"selected"; }   @endphp>Especial</option>
                         </select>
                       </div>
                       <div class="form-group">
-                        <label for="exampleSelectGender">Season</label>
+                        <label for="exampleSelectGender">Oferta</label>
                         <select class="form-control" name="session" id="exampleSelectGender">
-                          <option value="0" @php if($product->session=="0"){ echo"selected"; }   @endphp>Breakfast</option>
-                          <option value="1" @php if($product->session=="1"){ echo"selected"; }   @endphp>Lunch</option>
-                          <option value="2" @php if($product->session=="2"){ echo"selected"; }   @endphp>Dinner</option>
+                          <option value="0" @php if($product->session=="0"){ echo"selected"; }   @endphp>Combo De Temporada</option>
+                          <option value="1" @php if($product->session=="1"){ echo"selected"; }   @endphp>Combo Sorpresa</option>
+                          <option value="2" @php if($product->session=="2"){ echo"selected"; }   @endphp>Combo Light</option>
                         </select>
                       </div>
 

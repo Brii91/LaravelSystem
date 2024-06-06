@@ -11,7 +11,7 @@
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Pending Order Details</h4>
+                    <h4 class="card-title">Detalle de pedido</h4>
 
                     @if(Session::has('wrong'))
 
@@ -41,14 +41,9 @@
                           
            
                             <th> Date </th>
-                            <th> Invoice No </th>
-                            <th> Customer Name </th>
-                            <th> Customer Phone</th>
-                        
-                            <th> Shippping Address </th>
-              
-                  
-                            <th> Payment Method </th>
+                            <th> Factura No </th>
+                            <th> Nombre del cliente </th>
+                            <th> Número del cliente</th>
                             <th> Action </th>
                           </tr>
                         </thead>
@@ -79,9 +74,7 @@
 
 
                             <td>  {{  $user->phone }}</td>
-                            <td> {{ $order->shipping_address }} </td>
                      
-                            <td> {{ $order->pay_method }} </td>
 
                             <td>
 

@@ -3,7 +3,7 @@
 @section('container')
 
 
-<a href="/add/menu" type="button" class="btn btn-success" style="width:170px;height:35px;padding-top:9px;">+ Add Menu</a>
+<a href="/add/menu" type="button" class="btn btn-success" style="width:170px;height:35px;padding-top:9px;">+ Agregar menú</a>
 
 
 <br>
@@ -83,36 +83,36 @@ $per_rate=number_format($per_rate, 1);
       <h5 class="card-title">{{ $product->name }}</h5>
       <p class="card-text">{{ $product->description }}</p>
   
-      <p style = "text-transform:capitalize;">Catagory : {{ $product->catagory }}</p>
+      <p style = "text-transform:capitalize;">Oferta : {{ $product->catagory }}</p>
       @if($product->session==0)
-      <p style = "text-transform:capitalize;">Season : Breakfast</p>
+      <p style = "text-transform:capitalize;"> Breakfast</p>
       @endif
       @if($product->session==1)
-      <p style = "text-transform:capitalize;">Season : Lunch</p>
+      <p style = "text-transform:capitalize;"> Lunch</p>
       @endif
       @if($product->session==2)
-      <p style = "text-transform:capitalize;">Season : Day</p>
+      <p style = "text-transform:capitalize;"> Day</p>
       @endif
-      <p style = "text-transform:capitalize;">Price : {{ $product->price }} Tk</p>
+      <p style = "text-transform:capitalize;">Precio : {{ $product->price }} RD$</p>
       @if($product->available =="Stock")
 
-      <p style = "text-transform:capitalize;">Available : Stock </p>
+      <p style = "text-transform:capitalize;">Disponible : Existente </p>
 
       @endif
 
       @if($product->available !="Stock")
 
-      <p style = "text-transform:capitalize;">Available : Out of Stock </p>
+      <p style = "text-transform:capitalize;">Disponible : Agotado</p>
 
       @endif
 
 
-      <span class="rating_avg">Rating : {{  $per_rate}}</span>
+      <span class="rating_avg">Clasificación : {{  $per_rate}}</span>
 
     </div>
     <div class="card-footer">
-      <small class="text-muted"><a href="{{ asset('/menu/edit/'.$product->id) }}" class="btn btn-primary">Edit</a>
-      <a href="{{ asset('/menu/delete/'.$product->id) }}" class="btn btn-danger" style="margin-left:10px;">Delete</a>
+      <small class="text-muted"><a href="{{ asset('/menu/edit/'.$product->id) }}" class="btn btn-primary">Editar</a>
+      <a href="{{ asset('/menu/delete/'.$product->id) }}" class="btn btn-danger" style="margin-left:10px;">Eliminar</a>
 
 
 
