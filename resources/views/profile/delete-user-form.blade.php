@@ -1,3 +1,6 @@
+<x-livewire:delete-account-form />
+
+
 <x-jet-action-section>
     <x-slot name="title">
         {{ __('Delete Account') }}

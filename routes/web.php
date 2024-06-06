@@ -32,7 +32,14 @@ Route::get('Email', function () {
     return "Mensaje enviado";
 })->name('Notification');
 
+Route::get('/register/confirm', [RegisterController::class, 'confirm'])->name('register.confirm');
+
 Route::post("/register/confirm",'App\Http\Controllers\HomeController@register')->name('register/confirm');
+Route::get('/register', [RegisteredUserController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('register');
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::get("/redirects",'App\Http\Controllers\HomeController@redirects');
 
 #Route::get("/menu",'App\Http\Controllers\MenuController@menu');
